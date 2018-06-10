@@ -12,9 +12,13 @@
     <script defer src="js/fontawesome-all.js"></script>
 
     <script>
-        function starter() {
+        function playmusca() {
             var v = document.getElementsByTagName("audio")[0];
             v.play();
+        }
+        function starter() {
+            alert("SURPRESA!");
+            onclick=playmusca();
         }
     </script>
 
@@ -23,13 +27,13 @@
     <link rel="icon" href="imgs/heart5.png ">
     <title>13ReasonsWhyILoveYou</title>
   </head>
-  <body background="imgs/bg3.png" style="background-color: rgba(255, 182, 193, 0.6);" onmousemove="starter()">
+  <body background="imgs/bg3.png" style="background-color: rgba(255, 182, 193, 0.6);" onpageshow="starter()" onclick="playmusca()">
 
 
     <!-- Musiquinha bonita -->
     <!--<embed height="60" type="audio/midi" width="144" src="songs/EdSheeranPhotograph.mp3" volume="60" loop="true" autostart="true" />-->
-    <audio controls preload="auto" autoplay loop>
-        <source src="songs/EdSheeranPhotograph3.mp3" type="audio/mp3">
+    <audio oncanplay="playmusca()" id="musca" controls preload="auto" autoplay loop>
+        <source id="aud" src="songs/EdSheeranPhotograph3.mp3" type="audio/mp3">
     </audio>
     <!--<audio src="songs/EdSheeranPhotograph.mp3" autoplay loop></audio>-->
     
